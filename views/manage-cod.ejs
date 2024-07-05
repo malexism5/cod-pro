@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage COD Orders</title>
+</head>
+<body>
+    <h1>COD Orders</h1>
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Total</th>
+            <th>Status</th>
+        </tr>
+        <% orders.forEach(function(order) { %>
+        <tr>
+            <td><%= order.id %></td>
+            <td><%= order.customer.first_name %> <%= order.customer.last_name %></td>
+            <td><%= order.total_price %></td>
+            <td><%= order.financial_status %></td>
+        </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
